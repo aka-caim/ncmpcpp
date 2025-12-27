@@ -84,7 +84,7 @@ struct GeniusFetcher : public GoogleLyricsFetcher
 	virtual const char *name() const override { return "genius.com"; }
 
 protected:
-	virtual const char *regex() const override { return "<div data-lyrics-container.*?>(.*?)</div>"; }
+	virtual const char *regex() const override { return "<div class=\"LyricsHeader__TitleContainer-sc-6f4ef545-3 httgiS\"><h2 font-weight=\"light\" class=\"TextLabel-sc-b90f54a4-0 LyricsHeader__Title-sc-6f4ef545-0 eAbTcA eqxLVL\">.*?Lyrics.*?</h2></div></div></div>(.*?)</div><div class=\"RightSidebar__Container-sc-e6620a93-0 bAchPV\">"; }
 };
 
 struct JahLyricsFetcher : public GoogleLyricsFetcher
